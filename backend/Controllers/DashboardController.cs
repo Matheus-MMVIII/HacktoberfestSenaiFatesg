@@ -23,6 +23,6 @@ public class DashboardController : ControllerBase
         if (string.IsNullOrWhiteSpace(json))
             return NotFound("File not found.");
 
-        return PhysicalFile(json, "application/json");
+        return Content(json, "application/json");
     }
 }
