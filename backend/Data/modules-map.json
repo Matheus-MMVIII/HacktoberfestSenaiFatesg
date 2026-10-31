@@ -1,0 +1,62 @@
+{
+  "centro": {
+    "latitude": -15.1400000,
+    "longitude": -51.1100000
+  },
+  "zoom": 11,
+  "total_modulos": 4,
+  "marcadores": [
+    {
+      "modulo_id": "550e8400-e29b-41d4-a716-446655440000",
+      "identificacao": "MOD-001",
+      "outorga_id": "uuid-outorga-001",
+      "numero_outorga": "OUT-001",
+      "rio": "RIO-ARAGUAIA",
+      "latitude": -15.1234567,
+      "longitude": -51.1234567,
+      "status": "ONLINE",
+      "situacao_captacao": "FINALIZADA",
+      "volume_captado_hoje": 4000,
+      "ultimo_contato": "2026-10-31T09:30:00-03:00"
+    },
+    {
+      "modulo_id": "60f9496b-621c-48d8-8cba-1ebdd866a030",
+      "identificacao": "MOD-002",
+      "outorga_id": "uuid-outorga-001",
+      "numero_outorga": "OUT-001",
+      "rio": "RIO-ARAGUAIA",
+      "latitude": -15.1324567,
+      "longitude": -51.1124567,
+      "status": "ONLINE",
+      "situacao_captacao": "FINALIZADA",
+      "volume_captado_hoje": 2500,
+      "ultimo_contato": "2026-10-31T10:15:00-03:00"
+    },
+    {
+      "modulo_id": "a3bb189e-8bf9-4888-9a2e-52efad703173",
+      "identificacao": "MOD-003",
+      "outorga_id": "uuid-outorga-002",
+      "numero_outorga": "OUT-002",
+      "rio": "RIO-TOCANTINS",
+      "latitude": -15.1454567,
+      "longitude": -51.1054567,
+      "status": "ONLINE",
+      "situacao_captacao": "CAPTANDO",
+      "volume_captado_hoje": 5000,
+      "ultimo_contato": "2026-10-31T11:00:00-03:00"
+    },
+    {
+      "modulo_id": "2b6c237c-d63c-4431-9a7c-3088b991b5c2",
+      "identificacao": "MOD-004",
+      "outorga_id": "uuid-outorga-002",
+      "numero_outorga": "OUT-002",
+      "rio": "RIO-TOCANTINS",
+      "latitude": -15.1554567,
+      "longitude": -51.0954567,
+      "status": "ONLINE",
+      "situacao_captacao": "FINALIZADA",
+      "volume_captado_hoje": 3000,
+      "ultimo_contato": "2026-10-31T10:45:00-03:00"
+    }
+  ]
+}

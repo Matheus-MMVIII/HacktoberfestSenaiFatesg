@@ -1,0 +1,43 @@
+{
+  "total": 2,
+  "outorgas": [
+    {
+      "id": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+      "numero_outorga": "OUT-001",
+      "titular": "Fazenda Modelo",
+      "identificacao_rio": "RIO-ARAGUAIA",
+      "volume_diario_autorizado": 10000,
+      "data_validade": "2027-12-31",
+      "status": "ATIVA",
+      "modulos": [
+        {
+          "id": "uuid-modulo-001",
+          "identificacao": "MOD-001"
+        },
+        {
+          "id": "uuid-modulo-002",
+          "identificacao": "MOD-002"
+        }
+      ]
+    },
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "numero_outorga": "OUT-002",
+      "titular": "Fazenda Santa Maria",
+      "identificacao_rio": "RIO-TOCANTINS",
+      "volume_diario_autorizado": 20000,
+      "data_validade": "2028-06-30",
+      "status": "ATIVA",
+      "modulos": [
+        {
+          "id": "8d002a28-68e1-450f-9176-b3a167261d7b",
+          "identificacao": "MOD-003"
+        },
+        {
+          "id": "c94a5390-e7cf-4573-8a1a-c454e9bcfa63",
+          "identificacao": "MOD-004"
+        }
+      ]
+    }
+  ]
+}
