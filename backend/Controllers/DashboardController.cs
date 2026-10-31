@@ -16,9 +16,7 @@ public class DashboardController : ControllerBase
 
         return Ok(new
         {
-            Data = data.Value,
-            TotalVendas = 1500.00m,
-            QuantidadePedidos = 15
+            Data = data.Value
         });
     }
 }
