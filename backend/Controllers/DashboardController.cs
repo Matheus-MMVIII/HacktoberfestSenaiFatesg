@@ -1,22 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace MinhaApi.Controllers;
+namespace backend.Controllers;
 
 [ApiController]
 [Route("api/dashboard/")]
 public class DashboardController : ControllerBase
 {
-    [HttpGet]
-    public IActionResult Get([FromQuery] DateOnly? data)
-    {
-        if (data == null)
-        {
-            return BadRequest("The date field is mandatory.");
-        }
 
-        return Ok(new
-        {
-            Data = data.Value
-        });
+    private readonly IWebHostEnvironment _environment;
+
+    public DashboardController(IWebHostEnvironment environment)
+    {
+        _environment = environment;
+    }
+
+    [HttpGet]
+    public IActionResult Get()
+    {
+        var path = Path.Combine(
+            _environment.ContentRootPath,
+            "Data",
+            "dashboard.json"
+        );
+
+        if (!System.IO.File.Exists(path))
+            return NotFound("File not found.");
+
+        return PhysicalFile(path, "application/json");
     }
 }

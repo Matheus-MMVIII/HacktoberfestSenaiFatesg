@@ -1,0 +1,33 @@
+{
+  "data_referencia": "2026-10-31",
+  "resumo": {
+    "total_outorgas": 2,
+    "total_modulos": 4,
+    "modulos_online": 4,
+    "modulos_captando": 1,
+    "volume_autorizado_dia": 30000,
+    "volume_captado_dia": 14500,
+    "volume_disponivel_dia": 15500,
+    "percentual_utilizado": 48.33
+  },
+  "captacao_por_outorga": [
+    {
+      "outorga_id": "acde070d-8c4c-4f0d-9d8a-162843c10333",
+      "numero_outorga": "OUT-001",
+      "rio": "RIO-ARAGUAIA",
+      "volume_autorizado_dia": 10000,
+      "volume_captado_dia": 6500,
+      "volume_disponivel_dia": 3500,
+      "percentual_utilizado": 65
+    },
+    {
+      "outorga_id": "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454",
+      "numero_outorga": "OUT-002",
+      "rio": "RIO-TOCANTINS",
+      "volume_autorizado_dia": 20000,
+      "volume_captado_dia": 8000,
+      "volume_disponivel_dia": 12000,
+      "percentual_utilizado": 40
+    }
+  ]
+}
