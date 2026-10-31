@@ -1,3 +1,4 @@
+using backend.DataManager;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
@@ -7,25 +8,21 @@ namespace backend.Controllers;
 public class DashboardController : ControllerBase
 {
 
-    private readonly IWebHostEnvironment _environment;
+    private readonly IDataManager _dataManager;
 
-    public DashboardController(IWebHostEnvironment environment)
+    public DashboardController(IDataManager dataManager)
     {
-        _environment = environment;
+        _dataManager = dataManager;
     }
 
     [HttpGet]
     public IActionResult Get()
     {
-        var path = Path.Combine(
-            _environment.ContentRootPath,
-            "Data",
-            "dashboard.json"
-        );
+        string json = _dataManager.GetJson("dashboard.json");
 
-        if (!System.IO.File.Exists(path))
+        if (string.IsNullOrWhiteSpace(json))
             return NotFound("File not found.");
 
-        return PhysicalFile(path, "application/json");
+        return PhysicalFile(json, "application/json");
     }
 }

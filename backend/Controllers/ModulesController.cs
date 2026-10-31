@@ -1,3 +1,4 @@
+using backend.DataManager;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
@@ -7,40 +8,32 @@ namespace backend.Controllers;
 public class ModulesController : ControllerBase
 {
 
-    private readonly IWebHostEnvironment _environment;
+    private readonly IDataManager _dataManager;
 
-    public ModulesController(IWebHostEnvironment environment)
+    public ModulesController(IDataManager dataManager)
     {
-        _environment = environment;
+        _dataManager = dataManager;
     }
 
     [HttpGet]
     public IActionResult Get()
     {
-        var path = Path.Combine(
-            _environment.ContentRootPath,
-            "Data",
-            "modules.json"
-        );
+        string json = _dataManager.GetJson("modules.json");
 
-        if (!System.IO.File.Exists(path))
+        if (string.IsNullOrWhiteSpace(json))
             return NotFound("File not found.");
 
-        return PhysicalFile(path, "application/json");
+        return PhysicalFile(json, "application/json");
     }
 
     [HttpGet("map")]
     public IActionResult GetMap()
     {
-        var path = Path.Combine(
-            _environment.ContentRootPath,
-            "Data",
-            "modules-map.json"
-        );
+        string json = _dataManager.GetJson("modules-app.json");
 
-        if (!System.IO.File.Exists(path))
+        if (string.IsNullOrWhiteSpace(json))
             return NotFound("File not found.");
 
-        return PhysicalFile(path, "application/json");
+        return PhysicalFile(json, "application/json");
     }
 }
